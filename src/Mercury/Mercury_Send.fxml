@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Mercury.Controllers.SendMessageController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@MercuryResources/SendMessageBG.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="60.0" text="Send Message to:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="msgReceiver" layoutX="131.0" layoutY="55.0" />
+      <Label layoutX="16.0" layoutY="130.0" text="Message:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="msgBody" layoutX="16.0" layoutY="159.0" maxHeight="189.0" maxWidth="527.0" prefHeight="189.0" prefWidth="527.0" wrapText="true" />
+      <Button layoutX="223.0" layoutY="355.0" mnemonicParsing="false" onAction="#sendMessage" text="Send" />
+      <Button fx:id="closeSendScreen" layoutX="287.0" layoutY="355.0" mnemonicParsing="false" onAction="#exit" text="Back" />
+      <Label layoutX="14.0" layoutY="95.0" text="Sent by: ">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="msgSender" layoutX="65.0" layoutY="95.0" text="User">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="attachFile" layoutX="18.0" layoutY="355.0" mnemonicParsing="false" onAction="#attachFile" text="Attach File" />
+   </children>
+</Pane>
